@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: nemu-tools
+    runtime: node
+    plan: free
+    buildCommand: "echo no build"
+    startCommand: "node server.js"
+    healthCheckPath: /_render/health
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: CF_WORKER_URLS
+        sync: false      # カンマ区切りで Worker の URL を入れる（未設定なら server.js の既定値）
+      - key: KEEP_ALIVE
+        value: "0"

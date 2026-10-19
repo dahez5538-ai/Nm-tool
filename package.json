@@ -3,5 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "description": "nm-tool",
-  "engines": { "node": "20.x" }
+  "engines": { "node": "20.x" },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  }
 }
